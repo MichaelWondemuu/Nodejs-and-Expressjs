@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript test</title>
+</head>
+<body>
+    
+</body>
+<script>
+     //Question 1
+//     let FizzBuzz = (arrayInputs)=>{
+//         let res= [];
+//         for(let input of arrayInputs){
+//     if(input % 3 == 0 && input % 5 ==0)
+//    res.push('FizzBuzz');
+//     else if( input % 3 == 0)
+//    res.push('Fizz');
+//     else if( input % 5 == 0)
+//    res.push('Buzz');
+//     else res.push(input);
+// };
+// console.log(res);
+// return res;
+//     }
+//     FizzBuzz([75, 3, 77, 10])
+
+//     let fizzBuzz = (n)=> {
+//      let res = []
+
+//     for (let i = 1; i <= n; i++){
+//         // let string = ''
+//        if(i % 5 === 0 && i % 3 === 0)
+//          res.push("FizzBuzz")
+//       else  if (i % 3 === 0) res.push("Fizz")
+//         else if (i % 5 === 0) res.push("Buzz")
+//         else if(i % 5 !== 0 && i % 3 !== 0)
+//         res.push(i.toString())
+//     }
+//     console.log(res);
+//     return res;
+// };
+// fizzBuzz(15);
+
+    //Question 2
+//     let TwoSum = (arrayInputs, output)=>{
+//     let result = [];
+//     arrayInputs.map((input,key)=>{
+//         arrayInputs.map((value,index)=>{
+//             if(input + value === output && key <  index ){
+//                 result.push(key,index);
+//             }
+//         });
+//     });
+//     console.log(result);
+// };
+//     TwoSum([1, -5, 6, 4], -1)  
+let TwoSum = (arrayInput, target)=>{
+    let input1Index ={};
+    let res=[];
+    for(let i =0; i< arrayInput.length; i++){
+       let input1 = target - arrayInput[i];
+       input1Index[arrayInput[i]] = i;
+
+       if(input1 in input1Index){
+        res.push([input1Index[input1],i]);
+       }
+    }
+    
+    console.log(res)
+    return res;
+};
+TwoSum([1, -5, 62, 4,-2], -1);
+// let TwoSum = (inputArray, target)=>{
+//     let keys = {};
+//     for(let i = 0; i < inputArray.length; i++){
+//         let complement = target - inputArray[i];
+//         //    4          = -1    - -5
+//         keys[inputArray[i]] = i; // {}
+//         if(complement in keys){
+//             console.log([keys[complement], i]);
+//             return;
+//         } 
+//          // -5 + 4 = -1
+//          // -1 - -5 = 4;
+//          // -1 - 4  = -5;
+
+//     }
+//     console.log([]);
+// };
+</script>
+</html>
